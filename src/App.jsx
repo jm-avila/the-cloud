@@ -1,10 +1,13 @@
 import React from "react";
+import { ErrorBoundary } from "./components";
 
 function App() {
   return (
-    <div>
-      <h1>Front End La Liga</h1>
-    </div>
+    <ErrorBoundary>
+      <div>
+        <h1>Front End La Liga</h1>
+      </div>
+    </ErrorBoundary>
   );
 }
 
