@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextInput, LoginBtn } from "../BaseComponents";
+import { TextInput, LoginBtn } from "../../BaseComponents";
 
 function Login() {
   const [userName, setUserName] = useState("");
