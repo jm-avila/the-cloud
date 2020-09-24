@@ -4,8 +4,8 @@ function THead({ columns }) {
   return (
     <thead>
       <tr>
-        {columns.map(({ name }, i) => (
-          <th key={i}>{name}</th>
+        {columns.map((title, i) => (
+          <th key={i}>{title}</th>
         ))}
       </tr>
     </thead>

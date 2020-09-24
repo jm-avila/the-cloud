@@ -1,14 +1,12 @@
 import React from "react";
 import Table from "./Table";
+import generateRows from "./generateRows";
 import dummyData from "./data.json";
 
 // pages query => ?page=2
 function UsersList() {
-  const columns = ["Nombre", "Apellido"];
-  const rows = formatData(dummyData.data);
-  function formatData(data) {
-    return data.map(({ first_name, last_name }) => [first_name, last_name]);
-  }
+  const columns = ["Nombre", "Apellido", "Detalles"];
+  const rows = generateRows(dummyData.data);
 
   return (
     <div>
