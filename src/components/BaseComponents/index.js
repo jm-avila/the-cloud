@@ -1,5 +1,5 @@
-import LoginBtn from './LoginBtn';
+import SimpleBtn from './SimpleBtn';
 import TextInput from './TextInput';
 import Table from './Table';
 
-export { LoginBtn, TextInput, Table };
+export { SimpleBtn, TextInput, Table };

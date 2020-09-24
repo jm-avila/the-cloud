@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput, LoginBtn } from '../../BaseComponents';
+import { TextInput, SimpleBtn } from '../../BaseComponents';
 
 function Login() {
   const [userName, setUserName] = useState('');
@@ -13,7 +13,7 @@ function Login() {
       Login
       <TextInput onChange={setUserName} />
       <TextInput type="password" onChange={setPassword} />
-      <LoginBtn onClick={handleLoginBtnOnClick} />
+      <SimpleBtn text="Login" onClick={handleLoginBtnOnClick} />
     </div>
   );
 }
