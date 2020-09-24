@@ -1,7 +1,7 @@
 import React from "react";
-import Table from "../BaseComponents/Table";
+import Table from "../../BaseComponents/Table";
 import generateRows from "./generateRows";
-import dummyData from "./data.json";
+import dummyData from "../data.json";
 
 // pages query => ?page=2
 function UsersList() {

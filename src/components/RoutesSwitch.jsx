@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import UsersList from "./UsersList";
-import UserDetails from "./UserDetails";
+import { UsersList, UserDetails } from "./Views";
 
 function RoutesSwitch() {
   return (
