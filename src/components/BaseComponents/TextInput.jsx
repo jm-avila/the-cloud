@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function TextInput({ onChange, type = "text" }) {
+function TextInput({ value = "", onChange, type = "text" }) {
+  const [innerValue, setInnerValue] = useState(value);
+
+  useEffect(() => {
+    setInnerValue(value);
+  }, [value]);
+
   function handleOnChange(e) {
-    onChange(e.target.value);
+    const newValue = e.target.value;
+    setInnerValue(newValue);
+    onChange(newValue);
   }
-  return <input type={type} onChange={handleOnChange} />;
+
+  return <input value={innerValue} type={type} onChange={handleOnChange} />;
 }
 
 export default TextInput;
