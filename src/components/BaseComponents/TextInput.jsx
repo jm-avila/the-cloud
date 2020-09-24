@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function TextInput({ value = '', onChange, type = 'text' }) {
+function TextInput({ label, value = '', onChange, type = 'text' }) {
   const [innerValue, setInnerValue] = useState(value);
 
   useEffect(() => {
@@ -13,7 +13,12 @@ function TextInput({ value = '', onChange, type = 'text' }) {
     onChange(newValue);
   }
 
-  return <input value={innerValue} type={type} onChange={handleOnChange} />;
+  return (
+    <div>
+      <label>{label}</label>
+      <input value={innerValue} type={type} onChange={handleOnChange} />
+    </div>
+  );
 }
 
 export default TextInput;

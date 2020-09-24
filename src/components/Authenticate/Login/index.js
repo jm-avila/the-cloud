@@ -11,8 +11,8 @@ function Login() {
   return (
     <div>
       Login
-      <TextInput onChange={setUserName} />
-      <TextInput type="password" onChange={setPassword} />
+      <TextInput label="Usuario" onChange={setUserName} />
+      <TextInput type="password" label="Contraseña" onChange={setPassword} />
       <SimpleBtn text="Login" onClick={handleLoginBtnOnClick} />
     </div>
   );
