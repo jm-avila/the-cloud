@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { TextInput, LoginBtn } from "../../BaseComponents";
+import React, { useState } from 'react';
+import { TextInput, LoginBtn } from '../../BaseComponents';
 
 function Login() {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
 
   function handleLoginBtnOnClick() {
     console.log({ userName, password });

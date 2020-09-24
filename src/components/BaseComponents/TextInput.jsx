@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-function TextInput({ value = "", onChange, type = "text" }) {
+function TextInput({ value = '', onChange, type = 'text' }) {
   const [innerValue, setInnerValue] = useState(value);
 
   useEffect(() => {

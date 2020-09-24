@@ -1,6 +1,6 @@
-import React from "react";
-import THead from "./THead";
-import TBody from "./TBody";
+import React from 'react';
+import THead from './THead';
+import TBody from './TBody';
 
 function Table({ columns, rows }) {
   return (

@@ -1,5 +1,5 @@
-import React from "react";
-import dummyData from "../data.json";
+import React from 'react';
+import dummyData from '../data.json';
 
 function UserDetails({ match }) {
   const userId = match.params.id;

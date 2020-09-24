@@ -1,6 +1,6 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { ErrorBoundary, RoutesSwitch, Authenticate } from "./components";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { ErrorBoundary, RoutesSwitch, Authenticate } from './components';
 
 function App() {
   return (
