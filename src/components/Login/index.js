@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import TextInput from "./TextInput";
-import LoginBtn from "./LoginBtn";
+import { TextInput, LoginBtn } from "../BaseComponents";
 
 function Login() {
   const [userName, setUserName] = useState("");

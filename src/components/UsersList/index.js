@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "./Table";
+import Table from "../BaseComponents/Table";
 import generateRows from "./generateRows";
 import dummyData from "./data.json";
 
