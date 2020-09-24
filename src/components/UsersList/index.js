@@ -10,7 +10,6 @@ function UsersList() {
 
   return (
     <div>
-      Users List
       <Table columns={columns} rows={rows} />
     </div>
   );
