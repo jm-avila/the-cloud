@@ -5,8 +5,12 @@ function Form({ state, updateEntry = () => {}, deleteEntry = () => {} }) {
   const [formValues, setFormValues] = useState(state);
 
   useEffect(() => {
-    setFormValues(state);
+    setFormValues(getInitialFormValues(state));
   }, [state]);
+
+  function getInitialFormValues({ id, email, first_name, last_name }) {
+    return { id, email, first_name, last_name };
+  }
 
   function handleTextInputChange(field, value) {
     setFormValues((prevState) => ({ ...prevState, [field]: value }));
@@ -38,12 +42,8 @@ function Form({ state, updateEntry = () => {}, deleteEntry = () => {} }) {
         value={formValues.email}
         onChange={(val) => handleTextInputChange('email', val)}
       />
-      <SimpleBtn
-        value={formValues}
-        text={'Actualizar'}
-        onClick={handleUpdate}
-      />
-      <SimpleBtn value={formValues.id} text={'Borrar'} onClick={handleDelete} />
+      <SimpleBtn text={'Actualizar'} onClick={handleUpdate} />
+      <SimpleBtn text={'Borrar'} onClick={handleDelete} />
     </div>
   );
 }
