@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function generateRows(data) {
+export function generateRows(data) {
   return data.map(({ first_name, last_name, id }) => [
     first_name,
     last_name,
@@ -9,4 +9,6 @@ function generateRows(data) {
   ]);
 }
 
-export default generateRows;
+export function getPaginationData(currentPage, totalPages) {
+  return { currentPage, totalPages };
+}
