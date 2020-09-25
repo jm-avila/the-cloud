@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import { NavLink } from 'react-router-dom';
 import Form from './Form';
@@ -11,7 +11,7 @@ function UserDetails({ match }) {
 
   useEffect(() => {
     if (state.id !== userId) dispatch(loadUser(userId));
-  }, [state]);
+  }, [userId, dispatch, state]);
 
   return (
     <div>

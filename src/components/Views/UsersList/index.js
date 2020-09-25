@@ -14,7 +14,7 @@ function UsersList() {
 
   useEffect(() => {
     dispatch(loadUsers());
-  }, []);
+  }, [dispatch]);
 
   function onPageChange(newPage) {
     dispatch(changePage(newPage));
