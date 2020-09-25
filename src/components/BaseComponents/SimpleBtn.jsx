@@ -1,7 +1,7 @@
 import React from 'react';
 
-function LoginBtn({ text = '', onClick }) {
+function SimpleBtn({ text = '', onClick }) {
   return <button onClick={onClick}>{text}</button>;
 }
 
-export default LoginBtn;
+export default SimpleBtn;

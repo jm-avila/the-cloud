@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 function TextInput({ label, value = '', onChange, type = 'text' }) {
-  const [innerValue, setInnerValue] = useState(value);
+  const [innerValue, setInnerValue] = useState(value || '');
 
   useEffect(() => {
-    setInnerValue(value);
+    setInnerValue(value || '');
   }, [value]);
 
   function handleOnChange(e) {

@@ -1,41 +1,57 @@
 import React, { useState, useEffect } from 'react';
-import { TextInput, SimpleBtn } from '../../BaseComponents';
+import { useMappedState, useDispatch } from 'redux-react-hook';
 import { NavLink } from 'react-router-dom';
-import dummyData from '../data.json';
+import { TextInput, SimpleBtn } from '../../BaseComponents';
+import { loadUser } from '../../../store/actions/userDetails';
 
 function UserDetails({ match }) {
-  const userId = match.params.id;
+  const state = useMappedState(({ userDetails }) => userDetails);
+  const dispatch = useDispatch();
+  const userId = +match.params.id;
 
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
+  const [formValues, setFormValues] = useState(state);
 
   useEffect(() => {
-    const currentUser = dummyData.data.find(({ id }) => id == userId);
-    if (currentUser) {
-      const { first_name, last_name, email } = currentUser;
-      setFirstName(first_name);
-      setLastName(last_name);
-      setEmail(email);
-    }
-  }, [userId]);
+    if (state.id !== userId) dispatch(loadUser(userId));
+    setFormValues(state);
+  }, [state]);
 
   function handleUpdate() {
-    console.log('update');
+    console.log(formValues);
   }
 
   function handleDelete() {
-    console.log('delete');
+    console.log('delete', state.id);
+  }
+
+  function handleTextInputChange(field, value) {
+    setFormValues((prevState) => ({ ...prevState, [field]: value }));
   }
 
   return (
     <div>
-      <p>User {userId} Details</p>
-      <TextInput label="Nombre" value={firstName} onChange={setFirstName} />
-      <TextInput label="Apellido" value={lastName} onChange={setLastName} />
-      <TextInput type="email" label="Email" value={email} onChange={setEmail} />
-      <SimpleBtn text={'Actualizar'} onClick={handleUpdate} />
-      <SimpleBtn text={'Borrar'} onClick={handleDelete} />
+      <TextInput
+        label="Nombre"
+        value={formValues.first_name}
+        onChange={(val) => handleTextInputChange('first_name', val)}
+      />
+      <TextInput
+        label="Apellido"
+        value={formValues.last_name}
+        onChange={(val) => handleTextInputChange('last_name', val)}
+      />
+      <TextInput
+        type="email"
+        label="Email"
+        value={formValues.email}
+        onChange={(val) => handleTextInputChange('email', val)}
+      />
+      <SimpleBtn
+        value={formValues}
+        text={'Actualizar'}
+        onClick={handleUpdate}
+      />
+      <SimpleBtn value={formValues.id} text={'Borrar'} onClick={handleDelete} />
       <NavLink to="/detalle">Volver</NavLink>
     </div>
   );
