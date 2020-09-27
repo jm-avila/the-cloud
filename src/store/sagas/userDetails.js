@@ -62,11 +62,10 @@ function* handleUserDeleteRequest() {
 }
 
 async function deleteUser(id) {
-  const response = await fetch('https://reqres.in/api/users/' + id, {
+  await fetch('https://reqres.in/api/users/' + id, {
     method: 'DELETE',
     headers: { 'Content-type': 'application/json' },
   });
-  return await response.json();
 }
 
 export default function* watchUsersListRequest() {

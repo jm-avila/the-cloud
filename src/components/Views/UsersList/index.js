@@ -20,6 +20,8 @@ function UsersList() {
     dispatch(changePage(newPage));
   }
 
+  if (state.loading) return 'loading...';
+
   return (
     <div>
       <Table
@@ -28,6 +30,7 @@ function UsersList() {
         pagination={pagination}
         pageChange={onPageChange}
       />
+      {state.error}
     </div>
   );
 }

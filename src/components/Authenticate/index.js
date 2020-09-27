@@ -4,7 +4,9 @@ import LoginForm from './LoginForm';
 import { login } from '../../store/actions/authentication';
 
 function Authenticate({ children }) {
-  const { token } = useMappedState(({ authentication }) => authentication);
+  const { token, loading, error } = useMappedState(
+    ({ authentication }) => authentication,
+  );
   const dispatch = useDispatch();
 
   function validateCredentials(credentials) {
@@ -12,8 +14,14 @@ function Authenticate({ children }) {
   }
 
   if (token) return children;
+  if (loading) return 'loading...';
 
-  return <LoginForm validateCredentials={validateCredentials} />;
+  return (
+    <div>
+      <LoginForm validateCredentials={validateCredentials} />
+      {error}
+    </div>
+  );
 }
 
 export default Authenticate;

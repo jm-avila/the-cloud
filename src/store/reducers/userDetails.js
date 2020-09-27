@@ -43,7 +43,7 @@ export default (state = INITIAL_STATE, action) => {
           'Lo siento, algo fallo y no pudimos descargar la informacion del usuario.',
       };
     case UPDATE_USER:
-      return { ...state, ...payload, loading: true };
+      return { ...state, ...payload, loading: true, error: null };
     case UPDATE_USER_SUCCESS:
       return { ...state, loading: false, updated: true };
     case UPDATE_USER_ERROR:
@@ -53,7 +53,7 @@ export default (state = INITIAL_STATE, action) => {
         error: 'Lo siento, algo fallo y no pudimos actualizar el usuario.',
       };
     case DELETE_USER:
-      return { ...state, loading: true };
+      return { ...state, loading: true, error: null };
     case DELETE_USER_SUCCESS:
       return { ...state, loading: false, deleted: true };
     case DELETE_USER_ERROR:

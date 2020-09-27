@@ -7,7 +7,7 @@ function* handleCredentialsPost() {
     const payload = yield call(postCredentials, credentials);
     yield put({ type: LOGIN_SUCCESS, payload });
   } catch (e) {
-    yield put({ type: LOGIN_ERROR, payload: e.message });
+    yield put({ type: LOGIN_ERROR, payload: e });
   }
 }
 

@@ -17,6 +17,7 @@ function UserDetails({ match }) {
     if (state.id !== userId) dispatch(loadUser(userId));
   }, [userId, dispatch, state]);
 
+  if (state.loading) return 'loading...';
   return (
     <div>
       <Form
@@ -25,6 +26,7 @@ function UserDetails({ match }) {
         clickOnDeleteBtn={() => dispatch(deleteUser(userId))}
       />
       <NavLink to="/detalle">Volver</NavLink>
+      {state.error}
     </div>
   );
 }
