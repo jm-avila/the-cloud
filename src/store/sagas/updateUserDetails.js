@@ -1,19 +1,23 @@
 import { call, put, takeLatest, select } from 'redux-saga/effects';
-import { UPDATE_USER } from '../actions/updateUserDetails';
-import { LOAD_USER_SUCCESS, LOAD_USER_ERROR } from '../actions/userDetails';
+import {
+  UPDATE_USER,
+  UPDATE_USER_SUCCESS,
+  UPDATE_USER_ERROR,
+} from '../actions/updateUserDetails';
 
 function* handleUserUpdateRequest() {
   try {
-    const user = yield select(getUser);
-    const payload = yield call(updateUser, user.id, user);
-    yield put({ type: LOAD_USER_SUCCESS, payload });
+    const { id, data } = yield select(getUser);
+    yield call(updateUser, id, data);
+    yield put({ type: UPDATE_USER_SUCCESS });
   } catch (e) {
-    yield put({ type: LOAD_USER_ERROR, payload: e });
+    yield put({ type: UPDATE_USER_ERROR });
   }
 }
 
 function getUser({ updateUserDetails }) {
-  return updateUserDetails;
+  const { id, email, first_name, last_name } = updateUserDetails;
+  return { id, data: { email, first_name, last_name } };
 }
 
 async function updateUser(id, user) {

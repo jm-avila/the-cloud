@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { TextInput, SimpleBtn } from '../../BaseComponents';
 
-function Form({ state, updateEntry = () => {}, deleteEntry = () => {} }) {
+function Form({
+  state,
+  clickOnUpdateBtn = () => {},
+  clickOnDeleteBtn = () => {},
+}) {
   const [formValues, setFormValues] = useState(state);
 
   useEffect(() => {
@@ -14,14 +18,6 @@ function Form({ state, updateEntry = () => {}, deleteEntry = () => {} }) {
 
   function handleTextInputChange(field, value) {
     setFormValues((prevState) => ({ ...prevState, [field]: value }));
-  }
-
-  function handleUpdate() {
-    updateEntry(formValues);
-  }
-
-  function handleDelete() {
-    deleteEntry(formValues.id);
   }
 
   return (
@@ -42,8 +38,11 @@ function Form({ state, updateEntry = () => {}, deleteEntry = () => {} }) {
         value={formValues.email}
         onChange={(val) => handleTextInputChange('email', val)}
       />
-      <SimpleBtn text={'Actualizar'} onClick={handleUpdate} />
-      <SimpleBtn text={'Borrar'} onClick={handleDelete} />
+      <SimpleBtn
+        text={'Actualizar'}
+        onClick={() => clickOnUpdateBtn(formValues)}
+      />
+      <SimpleBtn text={'Borrar'} onClick={() => clickOnDeleteBtn()} />
     </div>
   );
 }
