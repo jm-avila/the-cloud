@@ -283,7 +283,29 @@
 
 @media screen and (max-width: 768px) {
   .content-container {
-    padding-top: 20vh;
+    padding-top: 10vh;
+  }
+  .text-input {
+    width: 80%;
+    left: 45%;
+    margin-bottom: 50px;
+  }
+  .view-title {
+    margin-bottom: 3rem !important;
+  }
+  .simple-btn {
+    border-radius: 4px;
+    background: #0078c8;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  footer {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    bottom: 4rem !important;
+    right: -3rem !important;
   }
 }
 
