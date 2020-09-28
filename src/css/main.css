@@ -34,6 +34,7 @@
 .table-container table {
   border-collapse: separate;
   border-spacing: 0.25em 1em;
+  margin-top: -1em;
   font-family: Tahoma, sans-serif;
 }
 
