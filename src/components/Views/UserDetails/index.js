@@ -6,7 +6,7 @@ import {
   updateUser,
   deleteUser,
 } from '../../../store/actions/userDetails';
-import { ViewTitle } from '../../BaseComponents';
+import { ViewTitle, ErrorMessage } from '../../BaseComponents';
 import Form from './Form';
 
 function UserDetails({ match }) {
@@ -29,7 +29,7 @@ function UserDetails({ match }) {
         clickOnDeleteBtn={() => dispatch(deleteUser(userId))}
       />
       <NavLink to="/detalle">Volver</NavLink>
-      {state.error}
+      <ErrorMessage text={state.error} />
     </Fragment>
   );
 }

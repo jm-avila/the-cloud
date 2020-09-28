@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import { loadUsers, changePage } from '../../../store/actions/userList';
-import { ViewTitle, Table } from '../../BaseComponents';
+import { ViewTitle, Table, ErrorMessage } from '../../BaseComponents';
 import { getPaginationData, generateRows } from './helpers';
 
 function UsersList() {
@@ -31,7 +31,7 @@ function UsersList() {
         pagination={pagination}
         pageChange={onPageChange}
       />
-      {state.error}
+      <ErrorMessage text={state.error} />
     </Fragment>
   );
 }

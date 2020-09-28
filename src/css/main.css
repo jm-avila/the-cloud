@@ -100,10 +100,10 @@
 }
 
 .text-input {
+  font-family: Tahoma, sans-serif;
   position: relative;
   padding: 20px 0 0;
   width: 35%;
-  font-family: Tahoma, sans-serif;
   margin: 15px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -129,6 +129,12 @@
   display: block;
   position: absolute;
   top: 0;
+}
+
+.error-message {
+  font-family: Tahoma, sans-serif;
+  font-size: 1.5rem;
+  color: #c8102f;
 }
 
 body {

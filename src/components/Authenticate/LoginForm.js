@@ -1,5 +1,10 @@
 import React, { Fragment, useState } from 'react';
-import { ViewTitle, TextInput, SimpleBtn } from '../BaseComponents';
+import {
+  ViewTitle,
+  TextInput,
+  SimpleBtn,
+  ErrorMessage,
+} from '../BaseComponents';
 
 function Login({ loading, error, validateCredentials }) {
   const [credentials, setCredentials] = useState({
@@ -29,7 +34,7 @@ function Login({ loading, error, validateCredentials }) {
         onChange={(val) => handleOnChange('password', val)}
       />
       <SimpleBtn text="Iniciar sesión" onClick={handleLoginBtnOnClick} />
-      {error}
+      <ErrorMessage text={error} />
     </Fragment>
   );
 }
