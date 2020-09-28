@@ -75,6 +75,10 @@
   transition: all 0.4s ease 0s;
 }
 
+.table-container .active {
+  background: #c8102f;
+}
+
 .simple-btn {
   color: #ffffff;
   border: none;
@@ -137,6 +141,10 @@ body {
 a {
   color: #ffffff;
   text-decoration: none;
+}
+
+a:hover {
+  color: #c8102f;
 }
 
 footer {

@@ -13,6 +13,10 @@ body {
 a {
   color: set-text-color($primary-color);
   text-decoration: none;
+
+  &:hover {
+    color: $red-color;
+  }
 }
 
 footer {
