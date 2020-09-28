@@ -18,9 +18,9 @@ function Login({ loading, error, validateCredentials }) {
 
   return (
     <Fragment>
-      <h1>Login</h1>
+      <h1>Iniciar sesión con tu Email</h1>
       <TextInput
-        label="Usuario"
+        label="Correo electrónico"
         onChange={(val) => handleOnChange('email', val)}
       />
       <TextInput
@@ -28,7 +28,7 @@ function Login({ loading, error, validateCredentials }) {
         label="Contraseña"
         onChange={(val) => handleOnChange('password', val)}
       />
-      <SimpleBtn text="Login" onClick={handleLoginBtnOnClick} />
+      <SimpleBtn text="Iniciar sesión" onClick={handleLoginBtnOnClick} />
       {error}
     </Fragment>
   );
