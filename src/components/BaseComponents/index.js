@@ -5,6 +5,7 @@ import ContentContainer from './ContentContainer';
 import ViewTitle from './ViewTitle';
 import ErrorMessage from './ErrorMessage';
 import LoadingSpinner from './LoadingSpinner';
+import LogoutBtn from './LogoutBtn';
 
 export {
   SimpleBtn,
@@ -14,4 +15,5 @@ export {
   ViewTitle,
   ErrorMessage,
   LoadingSpinner,
+  LogoutBtn,
 };
