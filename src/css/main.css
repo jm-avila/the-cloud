@@ -161,3 +161,7 @@ footer {
   height: 100vh;
   width: 100vw;
 }
+
+.view-title {
+  margin-bottom: 2rem;
+}

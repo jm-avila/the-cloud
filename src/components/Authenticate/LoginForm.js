@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { TextInput, SimpleBtn } from '../BaseComponents';
+import { ViewTitle, TextInput, SimpleBtn } from '../BaseComponents';
 
 function Login({ loading, error, validateCredentials }) {
   const [credentials, setCredentials] = useState({
@@ -18,7 +18,7 @@ function Login({ loading, error, validateCredentials }) {
 
   return (
     <Fragment>
-      <h1>Iniciar sesión con tu Email</h1>
+      <ViewTitle text="Inicia sesión con tu Email" />
       <TextInput
         label="Correo electrónico"
         onChange={(val) => handleOnChange('email', val)}
