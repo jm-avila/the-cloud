@@ -5,7 +5,8 @@ function PaginationBtn({ pagination, pageChange = () => {} }) {
 
   const btns = Array.from({ length: totalPages }, (v, i) => {
     const btnPage = i + 1;
-    const className = currentPage === btnPage ? 'active' : '';
+    let className = 'pagination-btn';
+    if (currentPage === btnPage) className += ' active';
     return (
       <button
         className={className}
