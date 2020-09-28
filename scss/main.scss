@@ -1,0 +1,30 @@
+@import 'config';
+@import 'content';
+
+body {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}

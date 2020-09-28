@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { TextInput, SimpleBtn } from '../BaseComponents';
 
-function Login({ validateCredentials }) {
+function Login({ loading, error, validateCredentials }) {
   const [credentials, setCredentials] = useState({
     email: null,
     password: null,
@@ -14,9 +14,11 @@ function Login({ validateCredentials }) {
     validateCredentials(credentials);
   }
 
+  if (loading) return 'loading...';
+
   return (
-    <div>
-      Login
+    <Fragment>
+      <h1>Login</h1>
       <TextInput
         label="Usuario"
         onChange={(val) => handleOnChange('email', val)}
@@ -27,7 +29,8 @@ function Login({ validateCredentials }) {
         onChange={(val) => handleOnChange('password', val)}
       />
       <SimpleBtn text="Login" onClick={handleLoginBtnOnClick} />
-    </div>
+      {error}
+    </Fragment>
   );
 }
 

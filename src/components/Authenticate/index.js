@@ -14,13 +14,13 @@ function Authenticate({ children }) {
   }
 
   if (token) return children;
-  if (loading) return 'loading...';
 
   return (
-    <div>
-      <LoginForm validateCredentials={validateCredentials} />
-      {error}
-    </div>
+    <LoginForm
+      loading={loading}
+      error={error}
+      validateCredentials={validateCredentials}
+    />
   );
 }
 
