@@ -7,7 +7,7 @@ import {
   LoadingSpinner,
 } from '../BaseComponents';
 
-function Login({ loading, error, validateCredentials }) {
+function Login({ loading, error, dispatchLogin }) {
   const [credentials, setCredentials] = useState({
     email: null,
     password: null,
@@ -17,7 +17,7 @@ function Login({ loading, error, validateCredentials }) {
     setCredentials((prevState) => ({ ...prevState, [field]: value }));
   }
   function handleLoginBtnOnClick() {
-    validateCredentials(credentials);
+    dispatchLogin(credentials);
   }
 
   if (loading) return <LoadingSpinner />;

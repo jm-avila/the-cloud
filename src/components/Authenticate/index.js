@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import LoginForm from './LoginForm';
-import { login } from '../../store/actions/authentication';
+import { login, logout } from '../../store/actions/authentication';
 import { LogoutBtn } from '../BaseComponents';
 
 function Authenticate({ children }) {
@@ -10,16 +10,10 @@ function Authenticate({ children }) {
   );
   const dispatch = useDispatch();
 
-  function validateCredentials(credentials) {
-    dispatch(login(credentials));
-  }
-
-  function dispatchLogout() {}
-
-  if (true || token)
+  if (token)
     return (
       <Fragment>
-        <LogoutBtn onClick={dispatchLogout} />
+        <LogoutBtn onClick={() => dispatch(logout())} />
         {children}
       </Fragment>
     );
@@ -28,7 +22,7 @@ function Authenticate({ children }) {
     <LoginForm
       loading={loading}
       error={error}
-      validateCredentials={validateCredentials}
+      dispatchLogin={(val) => dispatch(login(val))}
     />
   );
 }

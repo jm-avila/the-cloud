@@ -1,6 +1,9 @@
-export const LOGIN = 'LOGIN';
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGIN_ERROR = 'LOGIN_ERROR';
+import {
+  LOGIN,
+  LOGIN_SUCCESS,
+  LOGIN_ERROR,
+  LOGOUT,
+} from '../actions/authentication';
 
 const INITIAL_STATE = {
   email: null,
@@ -31,6 +34,8 @@ export default (state = INITIAL_STATE, { type, payload }) => {
         ...INITIAL_STATE,
         error: payload,
       };
+    case LOGOUT:
+      return INITIAL_STATE;
     default:
       return state;
   }
