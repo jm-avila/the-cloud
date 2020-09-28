@@ -2,17 +2,18 @@
 @import 'content';
 @import 'baseComponents';
 @import 'loadingSpinner';
+@import 'responsive';
 
 body {
   background: $primary-color;
-  color: set-text-color($primary-color);
+  color: $tertiary-color;
   height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
 a {
-  color: set-text-color($primary-color);
+  color: $tertiary-color;
   text-decoration: none;
 
   &:hover {
@@ -27,7 +28,7 @@ footer {
   right: 1rem;
   text-align: right;
   padding: 1rem;
-  color: set-text-color($primary-color);
+  color: $tertiary-color;
 }
 
 #root {

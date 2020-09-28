@@ -12,10 +12,8 @@ $secondary-font: sans-serif;
   padding: 0;
 }
 
-@function set-text-color($color) {
-  @if (lightness($color) > 40%) {
-    @return $secondary-color;
-  } @else {
-    @return $tertiary-color;
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
   }
 }
