@@ -5,7 +5,7 @@ import PaginationBtn from './PaginationBtn';
 
 function Table({ columns, rows, pagination, pageChange = () => {} }) {
   return (
-    <div>
+    <div className="table-container">
       <table>
         <THead columns={columns} />
         <TBody rows={rows} />

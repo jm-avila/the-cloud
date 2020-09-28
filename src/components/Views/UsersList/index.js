@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import Table from '../../BaseComponents/Table';
 import { getPaginationData, generateRows } from './helpers';
@@ -23,7 +23,7 @@ function UsersList() {
   if (state.loading) return 'loading...';
 
   return (
-    <div>
+    <Fragment>
       <Table
         columns={columns}
         rows={rows}
@@ -31,7 +31,7 @@ function UsersList() {
         pageChange={onPageChange}
       />
       {state.error}
-    </div>
+    </Fragment>
   );
 }
 

@@ -18,6 +18,41 @@
   background-size: cover;
 }
 
+.table-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-container table {
+  border-collapse: separate;
+  border-spacing: 0.25em 1em;
+  font-family: Tahoma, sans-serif;
+}
+
+.table-container table th {
+  font-size: 20px;
+  background-color: #0078c8;
+  color: #ffffff;
+}
+
+.table-container table th,
+.table-container table td {
+  padding: 0.25em 0.5em;
+  text-align: center;
+}
+
+.table-container table td {
+  background-color: #25282a;
+}
+
 body {
   background: #0078c8;
   color: #ffffff;
