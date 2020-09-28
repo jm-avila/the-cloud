@@ -1,17 +1,22 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { ErrorBoundary, RoutesSwitch, Authenticate } from './components';
+import {
+  ErrorBoundary,
+  ContentContainer,
+  Authenticate,
+  RoutesSwitch,
+} from './components';
 import './css/main.css';
 
 function App() {
   return (
     <BrowserRouter>
       <ErrorBoundary>
-        <div className="content-container">
+        <ContentContainer>
           <Authenticate>
             <RoutesSwitch />
           </Authenticate>
-        </div>
+        </ContentContainer>
       </ErrorBoundary>
     </BrowserRouter>
   );
