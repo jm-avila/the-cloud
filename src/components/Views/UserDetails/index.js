@@ -6,7 +6,7 @@ import {
   updateUser,
   deleteUser,
 } from '../../../store/actions/userDetails';
-import { ViewTitle, ErrorMessage } from '../../BaseComponents';
+import { ViewTitle, ErrorMessage, LoadingSpinner } from '../../BaseComponents';
 import Form from './Form';
 
 function UserDetails({ match }) {
@@ -18,7 +18,7 @@ function UserDetails({ match }) {
     if (state.id !== userId) dispatch(loadUser(userId));
   }, [userId, dispatch, state]);
 
-  if (state.loading) return 'loading...';
+  if (state.loading) return <LoadingSpinner />;
 
   return (
     <Fragment>

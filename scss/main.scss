@@ -1,6 +1,7 @@
 @import 'config';
 @import 'content';
-@import '_baseComponents';
+@import 'baseComponents';
+@import 'loadingSpinner';
 
 body {
   background: $primary-color;

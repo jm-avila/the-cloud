@@ -1,7 +1,12 @@
 import React, { Fragment, useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import { loadUsers, changePage } from '../../../store/actions/userList';
-import { ViewTitle, Table, ErrorMessage } from '../../BaseComponents';
+import {
+  ViewTitle,
+  Table,
+  ErrorMessage,
+  LoadingSpinner,
+} from '../../BaseComponents';
 import { getPaginationData, generateRows } from './helpers';
 
 function UsersList() {
@@ -20,7 +25,7 @@ function UsersList() {
     dispatch(changePage(newPage));
   }
 
-  if (state.loading) return 'loading...';
+  if (state.loading) return <LoadingSpinner />;
 
   return (
     <Fragment>

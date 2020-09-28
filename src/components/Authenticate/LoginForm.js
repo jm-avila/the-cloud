@@ -4,6 +4,7 @@ import {
   TextInput,
   SimpleBtn,
   ErrorMessage,
+  LoadingSpinner,
 } from '../BaseComponents';
 
 function Login({ loading, error, validateCredentials }) {
@@ -19,7 +20,7 @@ function Login({ loading, error, validateCredentials }) {
     validateCredentials(credentials);
   }
 
-  if (loading) return 'loading...';
+  if (loading) return <LoadingSpinner />;
 
   return (
     <Fragment>
