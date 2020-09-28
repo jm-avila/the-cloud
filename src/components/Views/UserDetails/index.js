@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import { NavLink } from 'react-router-dom';
-import Form from './Form';
 import {
   loadUser,
   updateUser,
   deleteUser,
 } from '../../../store/actions/userDetails';
+import { ViewTitle } from '../../BaseComponents';
+import Form from './Form';
 
 function UserDetails({ match }) {
   const state = useMappedState(({ userDetails }) => userDetails);
@@ -18,8 +19,10 @@ function UserDetails({ match }) {
   }, [userId, dispatch, state]);
 
   if (state.loading) return 'loading...';
+
   return (
-    <div>
+    <Fragment>
+      <ViewTitle text={`Detalles de ${state.first_name} ${state.last_name}`} />
       <Form
         state={state}
         clickOnUpdateBtn={(userData) => dispatch(updateUser(userData))}
@@ -27,7 +30,7 @@ function UserDetails({ match }) {
       />
       <NavLink to="/detalle">Volver</NavLink>
       {state.error}
-    </div>
+    </Fragment>
   );
 }
 

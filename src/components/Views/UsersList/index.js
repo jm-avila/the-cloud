@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
-import Table from '../../BaseComponents/Table';
-import { getPaginationData, generateRows } from './helpers';
 import { loadUsers, changePage } from '../../../store/actions/userList';
+import { ViewTitle, Table } from '../../BaseComponents';
+import { getPaginationData, generateRows } from './helpers';
 
 function UsersList() {
   const state = useMappedState(({ userList }) => userList);
@@ -24,6 +24,7 @@ function UsersList() {
 
   return (
     <Fragment>
+      <ViewTitle text="Lista de usuarios" />
       <Table
         columns={columns}
         rows={rows}
