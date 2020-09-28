@@ -75,6 +75,25 @@
   transition: all 0.4s ease 0s;
 }
 
+.simple-btn {
+  color: #ffffff;
+  border: none;
+  background: none;
+  font-weight: 700;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.simple-btn:hover {
+  background: #25282a;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
 body {
   background: #0078c8;
   color: #ffffff;

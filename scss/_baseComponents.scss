@@ -46,3 +46,21 @@
     }
   }
 }
+
+.simple-btn {
+  color: $tertiary-color;
+  border: none;
+  background: none;
+  font-weight: 700;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    background: $secondary-color;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+}
