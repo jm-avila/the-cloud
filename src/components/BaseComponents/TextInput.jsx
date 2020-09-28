@@ -14,9 +14,14 @@ function TextInput({ label, value = '', onChange, type = 'text' }) {
   }
 
   return (
-    <div>
-      <label>{label}</label>
-      <input value={innerValue} type={type} onChange={handleOnChange} />
+    <div className="text-input">
+      <label forHtml={label}>{label}</label>
+      <input
+        id={label}
+        value={innerValue}
+        type={type}
+        onChange={handleOnChange}
+      />
     </div>
   );
 }

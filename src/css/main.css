@@ -94,6 +94,38 @@
   letter-spacing: 2px;
 }
 
+.text-input {
+  position: relative;
+  padding: 20px 0 0;
+  width: 35%;
+  font-family: Tahoma, sans-serif;
+  margin: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.text-input input {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #25282a;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: 0;
+  padding: 5px 0;
+}
+
+.text-input label {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
 body {
   background: #0078c8;
   color: #ffffff;

@@ -64,3 +64,34 @@
     letter-spacing: 2px;
   }
 }
+
+.text-input {
+  position: relative;
+  padding: 20px 0 0;
+  width: 35%;
+  font-family: $primary-font, $secondary-font;
+  margin: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  input {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: $secondary-color;
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $tertiary-color;
+    outline: 0;
+    padding: 5px 0;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: 900;
+    color: $tertiary-color;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}

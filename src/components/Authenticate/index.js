@@ -13,7 +13,7 @@ function Authenticate({ children }) {
     dispatch(login(credentials));
   }
 
-  if (true || token) return children;
+  if (token) return children;
 
   return (
     <LoginForm
