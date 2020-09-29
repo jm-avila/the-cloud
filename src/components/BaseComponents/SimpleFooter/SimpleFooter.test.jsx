@@ -11,6 +11,8 @@ describe('ContentContainer render.', () => {
 
     const { getByText } = render(<SimpleFooter />);
 
-    getByText(text);
+    const footerElement = getByText(text);
+
+    expect(footerElement).toContainHTML('footer');
   });
 });
