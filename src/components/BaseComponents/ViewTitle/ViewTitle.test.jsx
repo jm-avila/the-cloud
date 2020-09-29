@@ -3,7 +3,7 @@ import ViewTitle from './ViewTitle';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-describe('ContentContainer render.', () => {
+describe('ViewTitle render.', () => {
   test('should render a h1 element that contains a text set by the text prop.', () => {
     const text = 'test';
 
