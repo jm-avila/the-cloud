@@ -14,7 +14,7 @@ function TextInput({ label, value = '', onChange, type = 'text' }) {
   }
 
   return (
-    <div className="text-input">
+    <div className="text-input" data-testid="text-input">
       <label htmlFor={label}>{label}</label>
       <input
         id={label}
