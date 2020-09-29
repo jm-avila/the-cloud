@@ -4,15 +4,17 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('SimpleBtn render and event test.', () => {
-  test('should render a button element with a text content set by the text prop.', () => {
+  test('should render a button element with a text content and className attribute set by props.', () => {
     const props = {
+      className: 'test-class',
       text: 'btn',
       onClick: () => {},
     };
 
     const { getByText } = render(<SimpleBtn {...props} />);
 
-    getByText(props.text);
+    const btnNode = getByText(props.text);
+    expect(btnNode).toHaveAttribute('class', props.className);
   });
 
   test('when the button is clicked the onClick callback is called once per click.', () => {
