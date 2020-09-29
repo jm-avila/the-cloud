@@ -2,7 +2,7 @@ import React from 'react';
 
 function TBody({ rows }) {
   return (
-    <tbody>
+    <tbody data-testid="table-body">
       {rows.map((data, i) => (
         <tr key={i}>
           {data.map((values, j) => (
