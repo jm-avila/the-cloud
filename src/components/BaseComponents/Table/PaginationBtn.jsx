@@ -24,7 +24,7 @@ function PaginationBtn({ pagination, pageChange = () => {} }) {
     if (newPage !== currentPage) pageChange(newPage);
   }
 
-  return <div>{btns}</div>;
+  return <div data-testid="pagination-container">{btns}</div>;
 }
 
 export default PaginationBtn;
