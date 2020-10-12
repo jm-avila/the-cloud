@@ -1,6 +1,11 @@
 import ErrorBoundary from './ErrorBoundary.jsx';
 import RoutesSwitch from './RoutesSwitch';
-import Authenticate from './Authenticate';
+import AuthenticationContainer from './AuthenticationContainer';
 import { ContentContainer } from './BaseComponents';
 
-export { ErrorBoundary, RoutesSwitch, Authenticate, ContentContainer };
+export {
+  ErrorBoundary,
+  RoutesSwitch,
+  AuthenticationContainer,
+  ContentContainer,
+};

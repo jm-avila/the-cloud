@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {
   ErrorBoundary,
   ContentContainer,
-  Authenticate,
+  AuthenticationContainer,
   RoutesSwitch,
 } from './components';
 import './css/main.css';
@@ -13,9 +13,9 @@ function App() {
     <BrowserRouter>
       <ErrorBoundary>
         <ContentContainer>
-          <Authenticate>
+          <AuthenticationContainer>
             <RoutesSwitch />
-          </Authenticate>
+          </AuthenticationContainer>
         </ContentContainer>
       </ErrorBoundary>
     </BrowserRouter>
