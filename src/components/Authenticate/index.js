@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
-import LoginForm from './LoginForm';
+import { LoginForm } from '../Views';
 import { login, logout } from '../../store/actions/authentication';
 import { SimpleBtn } from '../BaseComponents';
 
@@ -14,7 +14,7 @@ function Authenticate({ children }) {
     return (
       <Fragment>
         <SimpleBtn
-          text="logout"
+          text="Logout"
           className="logout-btn"
           onClick={() => dispatch(logout())}
         />

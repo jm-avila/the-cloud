@@ -5,7 +5,7 @@ import {
   SimpleBtn,
   ErrorMessage,
   LoadingSpinner,
-} from '../BaseComponents';
+} from '../../BaseComponents';
 
 function Login({ loading, error, dispatchLogin }) {
   const [credentials, setCredentials] = useState({
