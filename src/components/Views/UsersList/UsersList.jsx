@@ -13,7 +13,7 @@ function UsersList() {
   const state = useMappedState(({ userList }) => userList);
   const dispatch = useDispatch();
 
-  const columns = ['Nombre', 'Apellido', 'Detalles'];
+  const columns = ['First Name', 'Last Name', 'Details'];
   const rows = generateRows(state.data);
   const pagination = getPaginationData(state.page, state.total_pages);
 
@@ -29,7 +29,7 @@ function UsersList() {
 
   return (
     <Fragment>
-      <ViewTitle text="Lista de usuarios" />
+      <ViewTitle text="Users List" />
       <Table
         columns={columns}
         rows={rows}

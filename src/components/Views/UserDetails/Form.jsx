@@ -23,12 +23,12 @@ function Form({
   return (
     <div>
       <TextInput
-        label="Nombre"
+        label="First Name"
         value={formValues.first_name}
         onChange={(val) => handleTextInputChange('first_name', val)}
       />
       <TextInput
-        label="Apellido"
+        label="Last Name"
         value={formValues.last_name}
         onChange={(val) => handleTextInputChange('last_name', val)}
       />
@@ -38,11 +38,8 @@ function Form({
         value={formValues.email}
         onChange={(val) => handleTextInputChange('email', val)}
       />
-      <SimpleBtn
-        text={'Actualizar'}
-        onClick={() => clickOnUpdateBtn(formValues)}
-      />
-      <SimpleBtn text={'Borrar'} onClick={() => clickOnDeleteBtn()} />
+      <SimpleBtn text={'Update'} onClick={() => clickOnUpdateBtn(formValues)} />
+      <SimpleBtn text={'Delete'} onClick={() => clickOnDeleteBtn()} />
     </div>
   );
 }

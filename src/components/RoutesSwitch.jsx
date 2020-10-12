@@ -7,7 +7,7 @@ function RoutesSwitch() {
     <div>
       <Switch>
         <Route exact path="/" component={UsersList} />
-        <Route path="/detalle/:id" component={UserDetails} />
+        <Route path="/details/:id" component={UserDetails} />
         <Redirect exact to="/" />
       </Switch>
     </div>

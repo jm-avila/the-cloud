@@ -22,13 +22,13 @@ function UserDetails({ match }) {
 
   return (
     <Fragment>
-      <ViewTitle text={`Detalles de ${state.first_name} ${state.last_name}`} />
+      <ViewTitle text={`${state.first_name} ${state.last_name} Details`} />
       <Form
         state={state}
         clickOnUpdateBtn={(userData) => dispatch(updateUser(userData))}
         clickOnDeleteBtn={() => dispatch(deleteUser(userId))}
       />
-      <NavLink to="/detalle">Volver</NavLink>
+      <NavLink to="/details">Volver</NavLink>
       <ErrorMessage text={state.error} />
     </Fragment>
   );

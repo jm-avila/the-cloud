@@ -24,17 +24,17 @@ function Login({ loading, error, dispatchLogin }) {
 
   return (
     <Fragment>
-      <ViewTitle text="Inicia sesión con tu Email" />
+      <ViewTitle text="Login with Email" />
       <TextInput
-        label="Correo electrónico"
+        label="Email"
         onChange={(val) => handleOnChange('email', val)}
       />
       <TextInput
         type="password"
-        label="Contraseña"
+        label="Password"
         onChange={(val) => handleOnChange('password', val)}
       />
-      <SimpleBtn text="Iniciar sesión" onClick={handleLoginBtnOnClick} />
+      <SimpleBtn text="Login" onClick={handleLoginBtnOnClick} />
       <ErrorMessage text={error} />
     </Fragment>
   );
