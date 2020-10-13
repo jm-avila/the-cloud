@@ -7,12 +7,13 @@
     border-collapse: separate;
     border-spacing: 0.25em 1em;
     margin-top: -1em;
-    font-family: $primary-font, $secondary-font;
+    font-weight: 700;
+    letter-spacing: 1px;
 
     th {
       font-size: 20px;
       background-color: $primary-color;
-      color: $tertiary-color;
+      color: $secondary-color;
     }
 
     th,
@@ -20,14 +21,10 @@
       padding: 0.25em 0.5em;
       text-align: center;
     }
-
-    td {
-      background-color: $secondary-color;
-    }
   }
 
   .pagination-btn {
-    color: $tertiary-color;
+    color: $secondary-color;
     background: $primary-color;
     text-decoration: none;
     font-weight: 700;
@@ -36,8 +33,9 @@
     margin-right: 5px;
     border-radius: 4px;
     display: inline-block;
-    border: none;
+    border: 1px solid $secondary-color;
     transition: all 0.4s ease 0s;
+    cursor: pointer;
 
     &:hover {
       font-weight: 900;
@@ -47,34 +45,36 @@
   }
 
   .active {
-    background: $red-color;
+    background: $tertiary-color;
   }
 }
 
 .simple-btn {
-  color: $tertiary-color;
-  border: none;
-  background: none;
+  color: $secondary-color;
+  background: $primary-color;
+  border: 1px solid $secondary-color;
   font-weight: 700;
   padding: 10px;
+  margin: 0 10px 10px 10px;
   text-transform: uppercase;
   border-radius: 4px;
   display: inline-block;
   transition: all 0.3s ease 0s;
 
   &:hover {
+    color: $primary-color;
     background: $secondary-color;
+    border: 1px solid $primary-color;
     font-weight: 900;
     letter-spacing: 2px;
   }
 }
 
 .text-input {
-  font-family: $primary-font, $secondary-font;
   position: relative;
-  padding: 20px 0 0;
+  padding: 20px 0 0 0;
   width: 35%;
-  margin: 15px;
+  margin: 30px 0;
   left: 50%;
   transform: translateX(-50%);
 
@@ -85,15 +85,18 @@
     background: transparent;
     width: 100%;
     border: none;
-    border-bottom: 2px solid $tertiary-color;
-    outline: 0;
-    padding: 5px 0;
+    border-bottom: 2px solid $secondary-color;
+    outline: none;
+    padding: 15px 0 0 0;
   }
 
   label {
     font-size: 1rem;
     font-weight: 900;
-    color: $tertiary-color;
+    color: $secondary-color;
+    background: $primary-color;
+    padding: 5px;
+    border-radius: 4px;
     display: block;
     position: absolute;
     top: 0;
@@ -101,27 +104,26 @@
 }
 
 .error-message {
-  font-family: $primary-font, $secondary-font;
   font-size: 1.5rem;
-  color: $red-color;
+  color: $tertiary-color;
 }
 
 .logout-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-family: $primary-font, $secondary-font;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 20px;
   padding: 0.3rem 1.2rem;
-  color: $tertiary-color;
+  color: $secondary-color;
   background: $primary-color;
   outline: none;
-  border: none;
+  border: 1px solid $secondary-color;
   border-radius: 8px;
   transition: all 0.4s ease 0s;
 
   &:hover {
     cursor: pointer;
-    background: $red-color;
+    background: $tertiary-color;
   }
 }

@@ -1,15 +1,17 @@
-$primary-color: #0078c8;
-$secondary-color: #25282a;
-$tertiary-color: #ffffff;
-$red-color: #c8102f;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
-$primary-font: Tahoma;
+$primary-color: #89cff0;
+$secondary-color: #ffffff;
+$tertiary-color: #c8102f;
+
+$primary-font: 'Josefin Sans';
 $secondary-font: sans-serif;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $primary-font, $secondary-font;
 }
 
 @mixin media-md {

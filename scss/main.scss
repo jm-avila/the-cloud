@@ -6,29 +6,29 @@
 
 body {
   background: $primary-color;
-  color: $tertiary-color;
+  color: $secondary-color;
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
 a {
-  color: $tertiary-color;
+  color: $secondary-color;
+  border-bottom: 1px solid;
   text-decoration: none;
 
   &:hover {
-    color: $red-color;
+    color: $tertiary-color;
   }
 }
 
 footer {
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: fixed;
   bottom: 0.4rem;
   right: 1rem;
   text-align: right;
   padding: 1rem;
-  color: $tertiary-color;
+  color: $secondary-color;
 }
 
 #root {
