@@ -1,27 +1,19 @@
-# The Cloud Front end LaLiga
+# The Cloud
 
-## Instalacion:
+[Check it out](http://jm-avila.github.io/the-cloud)
 
-Abre tu terminal y accede al directorio que contiene el app de react. Una vez en esta usa el comando npm i para instalar las dependecias.
+## About the app:
 
-## Uso:
+It is a small application developed in react, which consumes the https://reqres.in/ api. For example: "george.bluth@reqres.in" and a random password. Once your credentials are authenticated, you can access the list of users, see their details, edit and delete them.
 
-Una vez instaladas las dependencias usa el comando npm start para iniciar la aplicacion. Esta estara disponible en el puerto 3000 de tu ordenadore, si no se abre una ventana con la aplicacion en tu explorador dirigete a http://localhost:3000.
+To take into account, when editing and deleting, the data in the list will not be modified, although the PUT and DELETE requests will be made.
 
-## Sobre el App front-end-laliga:
+The global state of the application is managed with redux, side effects and asynchrony with redux-saga.
 
-Es una pequeña aplicacion desarrollada en react, que consume el api de https://reqres.in/.
+Styles were developed using SASS. There is a breaking point, 550px, some styles are modified to fit the content on computer and a mobile device.
 
-En esta podras hacer login usando uno de los emails disponibles en https://reqres.in/api/users. Una vez se autentiquen tus credenciales podras acceder a las lista de usuarios, ver sus detalles, editarlo y eliminarlos.
+Navigation is managed through react-router-dom.
 
-A tener en cuenta, al editar y eliminar, no se modificaran los datos de las lista si bien si se haran las peticions PUT y DELETE respectivamente.
+All the base components have been tested using Jest and react-testing, there are render and event tests.
 
-El estado global de la aplicación se gestiona por medio de redux, y el manejo de efectos secundarios y la parte asyncrano con redux-saga.
-
-La capa de estilos fue desarrollada usando SASS. Existe un punto de quiebre, 768px, en el cual se modifican los estilos para tener una buena experiencia tanto en ordenador como en dispositivos mobiles.
-
-La navegacion de la aplicación se gestiona por medio de react-router-dom.
-
-Todos los componentes base han sido testeados usando Jest y react-testing, usando el formato de test de render y de eventos si fuese el caso.
-
-Para mantener la base del codigo simple opte por no usar librerias externas, y para mantenerla limpia configure prettier para que formate el codigo con cada guardado y eslint para que arrejo alamars si se declaran variables que nunca se utilizan.
+To keep the code clean, I've configure prettier to format the code with each save and eslint to display fix warnings if variables are declared but never used.
