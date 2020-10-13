@@ -6,7 +6,12 @@ import {
   updateUser,
   deleteUser,
 } from '../../../store/actions/userDetails';
-import { ViewTitle, ErrorMessage, LoadingSpinner } from '../../BaseComponents';
+import {
+  ViewTitle,
+  ErrorMessage,
+  LoadingSpinner,
+  TabTitle,
+} from '../../BaseComponents';
 import Form from './Form';
 
 function UserDetails({ match }) {
@@ -18,17 +23,20 @@ function UserDetails({ match }) {
     if (state.id !== userId) dispatch(loadUser(userId));
   }, [userId, dispatch, state]);
 
+  const viewTitle = `User Details`;
+
   if (state.loading) return <LoadingSpinner />;
 
   return (
     <Fragment>
-      <ViewTitle text={`${state.first_name} ${state.last_name} Details`} />
+      <TabTitle tabSubTitle={viewTitle} />
+      <ViewTitle text={viewTitle} />
       <Form
         state={state}
         clickOnUpdateBtn={(userData) => dispatch(updateUser(userData))}
         clickOnDeleteBtn={() => dispatch(deleteUser(userId))}
       />
-      <NavLink to="/details">Volver</NavLink>
+      <NavLink to="/details">Go Back</NavLink>
       <ErrorMessage text={state.error} />
     </Fragment>
   );

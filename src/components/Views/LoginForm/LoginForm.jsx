@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react';
 import {
-  ViewTitle,
-  TextInput,
-  SimpleBtn,
   ErrorMessage,
   LoadingSpinner,
+  SimpleBtn,
+  TabTitle,
+  TextInput,
+  ViewTitle,
 } from '../../BaseComponents';
 
 function Login({ loading, error, dispatchLogin }) {
@@ -24,6 +25,7 @@ function Login({ loading, error, dispatchLogin }) {
 
   return (
     <Fragment>
+      <TabTitle tabSubTitle="Login" />
       <ViewTitle text="Login with Email" />
       <TextInput
         label="Email"

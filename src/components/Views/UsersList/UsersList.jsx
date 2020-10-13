@@ -2,10 +2,11 @@ import React, { Fragment, useEffect } from 'react';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import { loadUsers, changePage } from '../../../store/actions/userList';
 import {
-  ViewTitle,
-  Table,
   ErrorMessage,
   LoadingSpinner,
+  Table,
+  TabTitle,
+  ViewTitle,
 } from '../../BaseComponents';
 import { getPaginationData, generateRows } from './helpers';
 
@@ -25,11 +26,14 @@ function UsersList() {
     dispatch(changePage(newPage));
   }
 
+  const viewTitle = 'Users List';
+
   if (state.loading) return <LoadingSpinner />;
 
   return (
     <Fragment>
-      <ViewTitle text="Users List" />
+      <TabTitle tabSubTitle={viewTitle} />
+      <ViewTitle text={viewTitle} />
       <Table
         columns={columns}
         rows={rows}
