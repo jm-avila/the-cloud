@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/the-cloud/static/css/main.f31aa989.chunk.css",
+    "main.js": "/the-cloud/static/js/main.a5a3e4fc.chunk.js",
+    "main.js.map": "/the-cloud/static/js/main.a5a3e4fc.chunk.js.map",
+    "runtime-main.js": "/the-cloud/static/js/runtime-main.f03aed4d.js",
+    "runtime-main.js.map": "/the-cloud/static/js/runtime-main.f03aed4d.js.map",
+    "static/js/2.d30e3813.chunk.js": "/the-cloud/static/js/2.d30e3813.chunk.js",
+    "static/js/2.d30e3813.chunk.js.map": "/the-cloud/static/js/2.d30e3813.chunk.js.map",
+    "index.html": "/the-cloud/index.html",
+    "precache-manifest.06d058f3828627a0b47aad4fb394bd9c.js": "/the-cloud/precache-manifest.06d058f3828627a0b47aad4fb394bd9c.js",
+    "service-worker.js": "/the-cloud/service-worker.js",
+    "static/css/main.f31aa989.chunk.css.map": "/the-cloud/static/css/main.f31aa989.chunk.css.map",
+    "static/js/2.d30e3813.chunk.js.LICENSE.txt": "/the-cloud/static/js/2.d30e3813.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/the-cloud/static/media/clouds.6ec953f2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f03aed4d.js",
+    "static/js/2.d30e3813.chunk.js",
+    "static/css/main.f31aa989.chunk.css",
+    "static/js/main.a5a3e4fc.chunk.js"
+  ]
+}
