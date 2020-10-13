@@ -14,8 +14,8 @@ $secondary-font: sans-serif;
   font-family: $primary-font, $secondary-font;
 }
 
-@mixin media-md {
-  @media screen and (max-width: 768px) {
+@mixin media-sm {
+  @media screen and (max-width: 550px) {
     @content;
   }
 }

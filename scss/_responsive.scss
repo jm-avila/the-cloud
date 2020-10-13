@@ -1,4 +1,4 @@
-@include media-md {
+@include media-sm {
   .content-container {
     padding-top: 15vh;
   }
@@ -19,6 +19,11 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
+  }
+
+  .logout-btn {
+    font-size: 0.75rem !important;
+    padding: 0.3rem;
   }
 
   footer {
